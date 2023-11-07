@@ -19,8 +19,8 @@ f = (1/np.sqrt(2*np.pi*var)) * np.e**(np.square(x-mu)/(-2*var))
 f_stand = (1/np.sqrt(2*np.pi*1)) * np.e**(np.square(x-0)/(-2*1))
 
 # Plotting values
-plt.plot(x, f, color="red")
-plt.plot(x, f_stand, color="grey", linestyle="--", label="Standard Gaussian")
+plt.plot(x, f, color="red", label=f"Normal (mu={mu}, var={var})")
+plt.plot(x, f_stand, color="grey", linestyle="--", label="Standard Normal")
 plt.xlim(left=min(x), right=max(x))
 plt.ylim(bottom=min(f.min(),f_stand.min())-0.02, top=max(f.max(),f_stand.max())+0.05)
 plt.xlabel("X")
